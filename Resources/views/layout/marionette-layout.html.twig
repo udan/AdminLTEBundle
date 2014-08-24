@@ -1,0 +1,32 @@
+{% extends '@AvanzuAdminTheme/layout/base-layout.html.twig' %}
+
+{% block page_content %}
+<div id="avanzu-admin-content"></div>
+{% endblock %}
+
+{% block backbone_views %}
+    {%  include '@AvanzuAdminTheme/Backbone/common.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+{# combine=true #}
+    {% javascripts
+        '@admin_lte_all'
+        '@AvanzuAdminThemeBundle/Resources/public/js/admin-app.js'
+        '@AvanzuAdminThemeBundle/Resources/public/js/dashboard-module.js'
+
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block javascripts_inline %}
+    <script>
+        (function($){
+            $(function(){
+
+                Avanzu.AdminInstance.start();
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

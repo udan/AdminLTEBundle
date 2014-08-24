@@ -1,17 +1,50 @@
 {# message view #}
-<script id="message-view"  type="text/x-underscore-template"></script>
-<div class="callout callout-info">
+<script id="message-view"  type="text/x-underscore-template">
     <h4><%= title %></h4>
     <p><%=  message %></p>
-</div>
+</script>
 {# message view #}
 
-
 {# loading view #}
-<script type="text/x-underscore-template" id="loading-view"></script>
+<script type="text/x-underscore-template" id="loading-view">
 <div class="row">
     <div class="col-xs-1"><i class="fa fa-spinner icon-spin text-aqua"></i></div>
     <div class="col-xs-11 text-center"><%= message %></div>
 </div>
+</script>
 {# loading view #}
+
+{# small box widget #}
+<script id="small-box-view" type="text/x-underscore-template">
+    <div class="inner">
+        <h3><%= title %></h3>
+        <p><%= message %></p>
+    </div>
+    <div class="icon"><i class="<%= icon %>"></i></div>
+    <a href="#" class="small-box-footer" data-action="box-link">
+        <%= linkText %> <i class="fa fa-arrow-circle-right"></i>
+    </a>
+</script>
+{# small box widget #}
+
+{# box widget #}
+<script id="box-view" type="text/x-underscore-template">
+    <div class="box-header">
+        <h3 class="box-title"><%= title %></h3>
+        <div class="box-tools pull-right" data-role="box-tools">
+        </div>
+    </div>
+    <div class="box-body" data-role="body"></div>
+    <div class="box-footer" data-role="footer"></div>
+</script>
+{# box widget #}
+
+{# regular box tools #}
+<script id="box-tools-regular" type="text/x-underscore-template">
+    <button class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse"><i class="fa fa-minus"></i></button>
+    <button class="btn btn-default btn-sm" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove"><i class="fa fa-times"></i></button>
+</script>
+{# regular box tools #}
+
+
 
