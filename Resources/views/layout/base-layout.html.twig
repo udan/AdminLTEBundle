@@ -14,7 +14,7 @@
 
     {# -------------------------------------------------------------------------------------------------- STYLESHEETS #}
     {% block stylesheets %}
-    {% stylesheets '@admin_lte_all_css' filter="cssrewrite" %}
+    {% stylesheets '@admin_lte_all_css' filter="cssrewrite"  %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
     {% endblock %}
@@ -24,7 +24,7 @@
 
     {# --------------------------------------------------------------------------------------------- JAVASCRIPTS_HEAD #}
     {%  block javascripts_head %}
-    {% javascripts '@AvanzuAdminThemeBundle/Resources/public/vendor/modernizr/modernizr.js'%}
+    {% javascripts '@AvanzuAdminThemeBundle/Resources/public/vendor/modernizr/modernizr.js' %}
         <script type="text/javascript" src="{{ asset(asset_url) }}"></script>
     {% endjavascripts %}
         <!--[if lt IE 9]>
@@ -40,7 +40,7 @@
 
     <header class="header">
         {% block avanzu_logo %}
-        <a href="#" class="logo">
+        <a href="#" class="logo" id="avanzu-admin-title">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
             {{ block('title') }}
         </a>
@@ -54,18 +54,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
-            <div class="navbar-right">
+
+            <div class="navbar-right" id="avanzu-admin-navbar">
                 <ul class="nav navbar-nav">
-                    {% block avanzu_navbar %}
-                    {{ render(controller('AvanzuAdminThemeBundle:Navbar:messages')) }}
-                    {{ render(controller('AvanzuAdminThemeBundle:Navbar:notifications')) }}
-                    {{ render(controller('AvanzuAdminThemeBundle:Navbar:tasks')) }}
-                    {{ render(controller('AvanzuAdminThemeBundle:Navbar:user')) }}
-                    {% endblock %}
+                    {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
+                        {% block avanzu_navbar %}
+                        {{ render(controller('AvanzuAdminThemeBundle:Navbar:messages')) }}
+                        {{ render(controller('AvanzuAdminThemeBundle:Navbar:notifications')) }}
+                        {{ render(controller('AvanzuAdminThemeBundle:Navbar:tasks')) }}
+                        {{ render(controller('AvanzuAdminThemeBundle:Navbar:user')) }}
+                        {% endblock %}
+                    {% endif %}
                 </ul>
             </div>
-            {% endif %}
+
         </nav>
     </header>
 
@@ -75,7 +77,7 @@
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="left-side sidebar-offcanvas">
         <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
+        <section class="sidebar" id="avanzu-admin-sidebar">
             {% block avanzu_sidebar %}
                 {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
                     {{ render(controller('AvanzuAdminThemeBundle:Sidebar:userPanel')) }}
@@ -90,7 +92,7 @@
     <!-- Right side column. Contains the navbar and content of the page -->
     <aside class="right-side">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
+        <section class="content-header" id="avanzu-admin-content-header">
             <h1>
                 {% block page_title %}Blank page{% endblock %}
                 <small>{% block page_subtitle %}Control panel{% endblock %}</small>
