@@ -48,7 +48,7 @@
             <tag name="kernel.event_listener" event="kernel.request" method="onRequest" />
         </service>
 
-<!--
+
         <service id="avanzu_admin_theme.navbar_user_listener" class="%avanzu_admin_theme.navbar_user_listener.class%">
             <tag name="kernel.event_listener" event="theme.navbar_user" method="onShowUser"/>
             <tag name="kernel.event_listener" event="theme.sidebar_user" method="onShowUser"/>
@@ -67,7 +67,7 @@
             <tag name="kernel.event_listener" event="theme.sidebar_setup_menu" method="onSetupMenu"/>
             <tag name="kernel.event_listener" event="theme.breadcrumb" method="onSetupMenu"/>
         </service>
--->
+
     </services>
 
 </container>
