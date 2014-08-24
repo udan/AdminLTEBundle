@@ -72,6 +72,7 @@ do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports =
             linkText  : ''
             color     : 'aqua'
             solid     : true
+            tile      : false
 
     BoxToolsRegular = Marionette.ItemView.extend
         template: '#box-tools-regular'
@@ -89,11 +90,18 @@ do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports =
         onRender: ->
             solid = (if @model.get('solid') then 'box-solid' else '')
             color = (if @model.get('color') then "box-#{@model.get('color')}" else 'box-default')
-            @$el.attr 'class', "box #{solid} #{color}"
+            tile  = (if @model.get('tile') then "bg-#{@model.get('color')}" else '')
+            @$el.attr 'class', "box #{solid} #{color} #{tile}"
         regions: 
             tools  : '[data-role="box-tools"]'
             body   : '[data-role="body"]'
-            footer : '[data-role="footer"]'
+
+    BoxFooterView = BoxView.extend 
+        template: '#box-footer-view'
+        regions: 
+            tools  : '[data-role="box-tools"]'
+            body   : '[data-role="body"]'
+            footer : '[data-role="footer"]'         
 
 # --------------------------------------------------------------------------------- MAIN APPLICATION
     app = new Marionette.Application
@@ -124,4 +132,5 @@ do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports =
             SuccessView     : SuccessView
             SmallBoxView    : SmallBoxView
             BoxView         : BoxView
+            BoxFooterView   : BoxFooterView
             BoxToolsRegular : BoxToolsRegular
