@@ -77,6 +77,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           $jsAssets . 'public/vendor/bootbox/bootbox.js',
                                           $jsAssets . 'public/js/dialogs.js',
                                           $jsAssets . 'public/js/namespace.js',
+
                                       ),
                                   ),
                                   'tools_js'               => array(
@@ -85,6 +86,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           $jsAssets . 'public/vendor/momentjs/moment.js',
                                           $jsAssets . 'public/vendor/holderjs/holder.js',
                                           $jsAssets . 'public/vendor/spinjs/spin.js',
+                                          $jsAssets . 'public/js/spinner.js',
                                       ),
                                   ),
                                   'admin_lte_js'           => array(
@@ -106,6 +108,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           $lteCss . 'font-awesome.css',
                                           $lteCss . 'ionicons.css',
                                           $lteCss . 'AdminLTE.css',
+                                          $cssAssets . 'css/avanzu-admin.css',
                                           //$lteFont . 'fontawesome-webfont.eot',
                                           // $lteFont . 'ionicons.eot',
                                       )

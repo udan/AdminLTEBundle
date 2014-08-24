@@ -8,10 +8,14 @@
 namespace Avanzu\AdminThemeBundle\Helper;
 
 
-class WidgetHelper  extends  \Twig_Extension {
+use Symfony\Component\Templating\Helper\Helper;
+
+class WidgetHelper  extends  Helper {
 
     public function getName()
     {
         return 'widget';
     }
+
+    public function box() {}
 }
