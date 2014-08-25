@@ -52,7 +52,6 @@
     });
     SmallBoxView = Marionette.ItemView.extend({
       template: '#small-box-view',
-      className: 'small-box',
       data: {},
       ui: {
         boxLink: '[data-action="box-link"]'
@@ -67,11 +66,6 @@
         this.model = new SmallBoxModel(args);
         return this.listenTo(this.model, 'change', this.render);
       },
-      onRender: function() {
-        return this.$el.attr({
-          'class': "small-box bg-" + (this.model.get('color'))
-        });
-      },
       colorize: function(color) {
         this.model.set('color', color);
         return this;
@@ -82,14 +76,33 @@
       }
     });
     BoxModel = Backbone.Model.extend({
+      initialize: function() {
+        this.on('change', this.update);
+        return this.update();
+      },
       defaults: {
         title: '',
         message: '',
         icon: 'fa fa-exclamation-circle',
         linkText: '',
         color: 'aqua',
-        solid: true,
-        tile: false
+        type: '',
+        tile: false,
+        solid: false,
+        attr: ''
+      },
+      update: function() {
+        var attr;
+        attr = [];
+        attr.push("box-" + (this.get('color')));
+        if (!(this.get('solid' === false || this.get('tile' === false)))) {
+          attr.push("box-solid");
+        }
+        if (!this.get('tile' === false)) {
+          attr.push("bg-" + (this.get('color')));
+        }
+        this.set('attr', attr.join(' '));
+        return console.log('updated ...');
       }
     });
     BoxToolsRegular = Marionette.ItemView.extend({
@@ -97,11 +110,20 @@
       ui: {
         collapse: '[data-widget="collapse"]',
         remove: '[data-widget="remove"]'
+      },
+      events: {
+        'click [data-widget="collapse"]': 'collapseClick'
+      },
+      collapseClick: function(event) {
+        event.preventDefault();
+        return this.trigger('collapse:click', this);
+      },
+      onRender: function() {
+        return $('[data-toggle="tooltip"]', this.$el).tooltip();
       }
     });
     BoxView = Marionette.LayoutView.extend({
       model: BoxModel,
-      className: 'box',
       template: '#box-view',
       initialize: function(args) {
         if (args == null) {
@@ -109,13 +131,6 @@
         }
         this.model = new BoxModel(args);
         return this.listenTo(this.model, 'change', this.render);
-      },
-      onRender: function() {
-        var color, solid, tile;
-        solid = (this.model.get('solid') ? 'box-solid' : '');
-        color = (this.model.get('color') ? "box-" + (this.model.get('color')) : 'box-default');
-        tile = (this.model.get('tile') ? "bg-" + (this.model.get('color')) : '');
-        return this.$el.attr('class', "box " + solid + " " + color + " " + tile);
       },
       regions: {
         tools: '[data-role="box-tools"]',
@@ -147,7 +162,7 @@
       appContent: '#avanzu-admin-content'
     });
     return exports.Avanzu != null ? exports.Avanzu : exports.Avanzu = {
-      AdminInstance: app,
+      Admin: app,
       Views: {
         MessageView: InfoView,
         InfoView: InfoView,
@@ -159,6 +174,10 @@
         BoxView: BoxView,
         BoxFooterView: BoxFooterView,
         BoxToolsRegular: BoxToolsRegular
+      },
+      Models: {
+        BoxModel: BoxModel,
+        SmallBoxModel: SmallBoxModel
       }
     };
   })(jQuery, Backbone, Backbone.Marionette, window);
