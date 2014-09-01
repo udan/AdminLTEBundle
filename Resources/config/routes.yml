@@ -38,3 +38,30 @@ avanzu_admin_ui_gen_demo:
 avanzu_admin_ui_icon_demo:
   path: /demo-admin/ui-elements/icons/
   defaults: {_controller: AvanzuAdminThemeBundle:Default:uiIcons}
+
+avanzu_admin_marionette_demo:
+  path: /demo-admin/marionette
+  defaults: {_controller: AvanzuAdminThemeBundle:Default:marionette}
+  methods: [GET]
+
+avanzu_admin_marionette_demo_fetch:
+  path: /demo-admin/marionette/{id}
+  defaults: {_controller: AvanzuAdminThemeBundle:Default:fetch}
+  methods: [GET]
+
+
+avanzu_admin_marionette_demo_create:
+  path: /demo-admin/marionette
+  defaults: {_controller: AvanzuAdminThemeBundle:Default:create}
+  methods: [POST]
+
+avanzu_admin_marionette_demo_update:
+  path: /demo-admin/marionette/{id}
+  defaults: {_controller: AvanzuAdminThemeBundle:Default:update}
+  methods: [PUT]
+
+avanzu_admin_marionette_demo_delete:
+  path: /demo-admin/marionette/{id}
+  defaults: {_controller: AvanzuAdminThemeBundle:Default:delete}
+  methods: [DELETE]
+

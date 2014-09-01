@@ -12,8 +12,6 @@
     {% javascripts
         '@admin_lte_all'
         '@AvanzuAdminThemeBundle/Resources/public/js/admin-app.js'
-        '@AvanzuAdminThemeBundle/Resources/public/js/dashboard-module.js'
-
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -24,8 +22,9 @@
     <script>
         (function($){
             $(function(){
-
-                Avanzu.Admin.start();
+                var settings = {};
+                {% block javascript_config %}{% endblock %}
+                Avanzu.Admin.start(settings);
             });
         })(jQuery);
     </script>

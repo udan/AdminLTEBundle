@@ -9,6 +9,7 @@ namespace Avanzu\AdminThemeBundle\Model;
 
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Check;
 
 /**
  * Class FormDemoModel
@@ -64,6 +65,34 @@ class FormDemoModel {
      * @var UploadedFile
      */
     protected $file;
+
+    /**
+     * @var string
+     * @Check\NotBlank()
+     */
+    protected $name;
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
 
     /**
      * @param mixed $email

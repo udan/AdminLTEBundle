@@ -1,0 +1,33 @@
+{% extends '@AvanzuAdminTheme/layout/marionette-layout.html.twig' %}
+{% block page_content %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block backbone_views %}
+    {{ parent() }}
+    <script type="text/x-underscore-template" id="demo-form">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-actions">
+            <button data-action="reset" class="btn btn-default">Reset</button>
+            <button data-action="save" class="btn btn-primary">Save</button>
+    </div>
+    {{ form_end(form) }}
+    </script>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+    '@AvanzuAdminThemeBundle/Resources/public/js/demo-module.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block javascript_config %}
+    settings.urls = {
+        demoModel: '{{ path('avanzu_admin_marionette_demo') }}'
+    };
+{% endblock %}

@@ -27,17 +27,47 @@ class FormDemoModelType extends AbstractType{
             'choice3' => 'This is choice 3',
         );
 
-        $builder->add('name', 'text')
-                ->add('gender', 'choice', array('choices' => array('m' => 'male', 'f' => 'female')))
-                ->add('someOption', 'choice', array('choices' => $options, 'expanded' => true))
-                ->add('someChoices', 'choice', array('choices' => $choices, 'expanded' => true, 'multiple' => true))
-                ->add('username')
-                ->add('email')
-                ->add('termsAccepted','checkbox')
-                ->add('message', 'textarea')
-                ->add('price')
-                ->add('date', 'date', array('widget' => 'single_text'))
-                ->add('time', 'time', array('widget' => 'single_text'))
+        $builder->add('name', 'text', array(
+            'attr'             => array( 'data-bind' => 'name' ))
+            )
+                ->add('gender', 'choice', array(
+                    'choices'  => array('m' => 'male', 'f' => 'female'),
+                    'attr'     => array( 'data-bind' => 'gender' ),
+                    ))
+                ->add('someOption', 'choice', array(
+                    'choices'  => $options,
+                    'expanded' => true,
+                    'attr'     => array( 'data-bind' => 'someOption' )
+                    ))
+                ->add('someChoices', 'choice', array(
+                    'choices'  => $choices,
+                    'expanded' => true,
+                    'multiple' => true,
+                    'attr'     => array( 'data-bind' => 'someChoices' )
+                    ))
+                ->add('username',null, array(
+                    'attr'     => array( 'data-bind' => 'username' )
+                    ))
+                ->add('email', null, array(
+                    'attr'     => array( 'data-bind' => 'email' )
+                ))
+                ->add('termsAccepted','checkbox', array(
+                    'attr'     => array( 'data-bind' => 'termsAccepted' )
+                ))
+                ->add('message', 'textarea',array(
+                    'attr'     => array( 'data-bind' => 'message' )
+                ))
+                ->add('price', null, array(
+                    'attr'     => array( 'data-bind' => 'price' )
+                ))
+                ->add('date', 'date', array(
+                    'widget'   => 'single_text',
+                    'attr'     => array( 'data-bind' => 'date' )
+                    ))
+                ->add('time', 'time', array(
+                    'widget'   => 'single_text',
+                    'attr'     => array( 'data-bind' => 'time' )
+                    ))
         ;
     }
 

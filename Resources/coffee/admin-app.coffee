@@ -2,6 +2,12 @@
 
 do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports = window) ->
 
+    exports.Avanzu          ?= {}
+    exports.Avanzu.defaults ?= {}
+
+# ------------------------------------------------------------------------------------------- MODELS
+
+
 # -------------------------------------------------------------------------------------------- VIEWS
 
     RestorableRegion = Marionette.Region.extend
@@ -119,6 +125,56 @@ do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports =
             body   : '[data-role="body"]'
             footer : '[data-role="footer"]'
 
+    FormView = Marionette.ItemView.extend
+
+        constructor: ->
+            Marionette.ItemView.prototype.constructor.apply @, arguments
+            @displayErrors = _.bind @displayErrors, @
+
+            @on 'render', @updateView
+            @listenTo @model, 'error', @displayErrors
+
+        clearErrors: ->
+            @$el.find('[data-role="error-message"]').remove()
+            @$el.find('.has-error').removeClass 'has-error'
+
+        displayErrors: (model, xhr) ->
+            errors = xhr.responseJSON
+            @clearErrors()
+            for field, messages of errors
+                $el = @form[field]
+                if _.isArray(messages) is false or messages.length < 1 then continue
+                if $el? and ($parent = $el.parent())?
+                    span = @buildMessage messages
+                    $parent.addClass('has-error').append span
+
+        buildMessage: (message) ->
+            span = $('<span></span>')
+            span.attr
+                'class': 'help-block text-danger'
+                'data-role' : 'error-message'
+            span.html message.join('<br/>')
+            span
+
+        bindUIElements: ->
+            Marionette.ItemView.prototype.bindUIElements.apply @, arguments
+            @form  = {}
+            inputs = @$el.find '[data-bind]'
+            for input in inputs
+                $input      = $(input)
+                name        = $input.attr 'data-bind'
+                @form[name] = $input
+
+        updateView: ->
+            for name, input of @form
+                value = @model.get name
+                input.val value
+
+        populateModel: ->
+            for name, input of @form
+                val = input.val()
+                @model.set name, val
+
 # --------------------------------------------------------------------------------- MAIN APPLICATION
     app = new Marionette.Application
     app.addRegions
@@ -136,20 +192,25 @@ do ($ = jQuery, Backbone = Backbone, Marionette = Backbone.Marionette, exports =
 
         appContent : '#avanzu-admin-content'
 
+    app.addInitializer (options = {}) ->
+        app.conf = $.extend true, {}, exports.Avanzu.defaults, options
+
 # ------------------------------------------------------------------------------------------ EXPORTS
-    exports.Avanzu ?=
-        Admin: app
-        Views:
-            MessageView     : InfoView
-            InfoView        : InfoView
-            WarningView     : WarningView
-            DangerView      : DangerView
-            LoadingView     : LoadingView
-            SuccessView     : SuccessView
-            SmallBoxView    : SmallBoxView
-            BoxView         : BoxView
-            BoxFooterView   : BoxFooterView
-            BoxToolsRegular : BoxToolsRegular
-        Models:
-            BoxModel        : BoxModel
-            SmallBoxModel   : SmallBoxModel
+
+    exports.Avanzu.Admin ?= app
+    exports.Avanzu.Views ?=
+        MessageView     : InfoView
+        InfoView        : InfoView
+        WarningView     : WarningView
+        DangerView      : DangerView
+        LoadingView     : LoadingView
+        SuccessView     : SuccessView
+        SmallBoxView    : SmallBoxView
+        BoxView         : BoxView
+        BoxFooterView   : BoxFooterView
+        BoxToolsRegular : BoxToolsRegular
+        FormView        : FormView
+
+    exports.Avanzu.Models ?=
+        BoxModel        : BoxModel
+        SmallBoxModel   : SmallBoxModel
