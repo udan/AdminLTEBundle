@@ -16,12 +16,12 @@ avanzu_admin_show_message:
 
 ### Data Model
 
-In order to use this component, your user class has to implement the `Avanzu\AdminThemeBundle\Model\MessageInterface`
+In order to use this component, your user class has to implement the `udan\AdminLTEBundle\Model\MessageInterface`
 ```php
 <?php
 namespace MyAdminBundle\Model;
 // ...
-use Avanzu\AdminThemeBundle\Model\MessageInterface as ThemeMessage
+use udan\AdminLTEBundle\Model\MessageInterface as ThemeMessage
 
 class MessageModel implements  ThemeMessage {
 	// ...
@@ -38,7 +38,7 @@ namespace MyAdminBundle\EventListener;
 
 // ...
 
-use Avanzu\AdminThemeBundle\Event\MessageListEvent;
+use udan\AdminLTEBundle\Event\MessageListEvent;
 use MyAdminBundle\Model\MessageModel;
 
 class MyMessageListListener {

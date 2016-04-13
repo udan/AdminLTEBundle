@@ -5,7 +5,7 @@
  * Date: 17.03.14
  */
 
-namespace Avanzu\AdminThemeBundle\Twig;
+namespace udan\AdminLTEBundle\Twig;
 
 
 use Twig_Environment;

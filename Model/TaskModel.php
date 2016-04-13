@@ -5,13 +5,13 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 
 /**
  * Class TaskModel
  *
- * @package Avanzu\AdminThemeBundle\Model
+ * @package udan\AdminLTEBundle\Model
  */
 class TaskModel implements TaskInterface
 {

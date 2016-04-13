@@ -5,7 +5,7 @@
  * Date: 16.03.14
  */
 
-namespace Avanzu\AdminThemeBundle\Helper;
+namespace udan\AdminLTEBundle\Helper;
 
 
 class WidgetHelper  extends  \Twig_Extension {

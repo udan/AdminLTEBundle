@@ -22,7 +22,7 @@ Enable the bundle in your kernel:
 	{
 		$bundles = array(
 			// ...
-			new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
+			new udan\AdminLTEBundle\udanAdminLTEBundle(),
 		);
 	}
 ```

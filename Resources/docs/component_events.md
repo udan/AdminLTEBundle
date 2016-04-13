@@ -23,6 +23,6 @@ In order to see some working examples, the bundle comes with a demo implementati
 Simply remove the comments in the `services.xml` that comes with this bundle, and import the routing to your `routing.yml`
 ```yaml
 avanzu_admin:
-    resource: "@AvanzuAdminThemeBundle/Resources/config/routes.yml"
+    resource: "@udanAdminLTEBundle/Resources/config/routes.yml"
 
 ```

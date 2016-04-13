@@ -5,15 +5,15 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Event;
+namespace udan\AdminLTEBundle\Event;
 
 
-use Avanzu\AdminThemeBundle\Model\NotificationInterface;
+use udan\AdminLTEBundle\Model\NotificationInterface;
 
 /**
  * Class NotificationListEvent
  *
- * @package Avanzu\AdminThemeBundle\Event
+ * @package udan\AdminLTEBundle\Event
  */
 class NotificationListEvent extends ThemeEvent
 {

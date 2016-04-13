@@ -1,6 +1,6 @@
 <?php
 
-namespace Avanzu\AdminThemeBundle\DependencyInjection;
+namespace udan\AdminLTEBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,11 +18,14 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('avanzu_admin_theme');
+        $rootNode = $treeBuilder->root('udan_admin_lte');
 
         $rootNode->children()
                     ->scalarNode('bower_bin')
                         ->defaultValue('/usr/local/bin/bower')
+                    ->end()
+                    ->scalarNode('use_assetic')
+                      ->defaultValue(true)
                     ->end()
                 ->end();
         // Here you should define the parameters that are allowed to

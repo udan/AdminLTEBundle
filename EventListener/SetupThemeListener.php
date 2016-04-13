@@ -5,10 +5,10 @@
  * Date: 01.05.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Theme\ThemeManager;
+use udan\AdminLTEBundle\Theme\ThemeManager;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
 class SetupThemeListener {

@@ -5,10 +5,10 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Event;
+namespace udan\AdminLTEBundle\Event;
 
 
-use Avanzu\AdminThemeBundle\Model\UserInterface;
+use udan\AdminLTEBundle\Model\UserInterface;
 
 class ShowUserEvent extends  ThemeEvent {
 
@@ -18,7 +18,7 @@ class ShowUserEvent extends  ThemeEvent {
     protected $user;
 
     /**
-     * @param \Avanzu\AdminThemeBundle\Model\UserInterface $user
+     * @param \udan\AdminLTEBundle\Model\UserInterface $user
      *
      * @return $this
      */
@@ -29,7 +29,7 @@ class ShowUserEvent extends  ThemeEvent {
     }
 
     /**
-     * @return \Avanzu\AdminThemeBundle\Model\UserInterface
+     * @return \udan\AdminLTEBundle\Model\UserInterface
      */
     public function getUser()
     {

@@ -5,13 +5,13 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 
 /**
  * Interface MenuItemInterface
  *
- * @package Avanzu\AdminThemeBundle\Model
+ * @package udan\AdminLTEBundle\Model
  */
 interface MenuItemInterface {
     /**

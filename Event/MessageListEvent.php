@@ -5,10 +5,10 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Event;
+namespace udan\AdminLTEBundle\Event;
 
 
-use Avanzu\AdminThemeBundle\Model\MessageInterface;
+use udan\AdminLTEBundle\Model\MessageInterface;
 
 /**
  * The MessageListEvent should be used with the {@link ThemeEvents::THEME_MESSAGES}

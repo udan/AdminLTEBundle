@@ -5,11 +5,11 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Event\SidebarMenuEvent;
-use Avanzu\AdminThemeBundle\Model\MenuItemModel;
+use udan\AdminLTEBundle\Event\SidebarMenuEvent;
+use udan\AdminLTEBundle\Model\MenuItemModel;
 use Symfony\Component\HttpFoundation\Request;
 
 class SidebarSetupMenuDemoListener

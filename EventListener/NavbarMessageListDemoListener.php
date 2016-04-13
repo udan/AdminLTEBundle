@@ -5,12 +5,12 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Event\MessageListEvent;
-use Avanzu\AdminThemeBundle\Model\MessageModel;
-use Avanzu\AdminThemeBundle\Model\UserModel;
+use udan\AdminLTEBundle\Event\MessageListEvent;
+use udan\AdminLTEBundle\Model\MessageModel;
+use udan\AdminLTEBundle\Model\UserModel;
 
 class NavbarMessageListDemoListener {
 

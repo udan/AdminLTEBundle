@@ -1,5 +1,5 @@
 login:
     path:     /login
-    defaults: { _controller: AvanzuAdminThemeBundle:Security:login }
+    defaults: { _controller: udanAdminLTEBundle:Security:login }
 login_check:
     path: /login_check

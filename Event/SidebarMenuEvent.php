@@ -5,16 +5,16 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Event;
+namespace udan\AdminLTEBundle\Event;
 
 
-use Avanzu\AdminThemeBundle\Model\MenuItemInterface;
+use udan\AdminLTEBundle\Model\MenuItemInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class SidebarMenuEvent
  *
- * @package Avanzu\AdminThemeBundle\Event
+ * @package udan\AdminLTEBundle\Event
  */
 class SidebarMenuEvent extends ThemeEvent
 {

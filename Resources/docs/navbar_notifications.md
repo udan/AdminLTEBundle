@@ -16,12 +16,12 @@ avanzu_admin_show_notification:
 
 ### Data Model
 
-In order to use this component, your user class has to implement the `Avanzu\AdminThemeBundle\Model\NotificationInterface`
+In order to use this component, your user class has to implement the `udan\AdminLTEBundle\Model\NotificationInterface`
 ```php
 <?php
 namespace MyAdminBundle\Model;
 // ...
-use Avanzu\AdminThemeBundle\Model\NotificationInterface as ThemeNotification
+use udan\AdminLTEBundle\Model\NotificationInterface as ThemeNotification
 
 class NotificationModel implements  ThemeNotification {
 	// ...
@@ -37,7 +37,7 @@ namespace MyAdminBundle\EventListener;
 
 // ...
 
-use Avanzu\AdminThemeBundle\Event\NotificationListEvent;
+use udan\AdminLTEBundle\Event\NotificationListEvent;
 use MyAdminBundle\Model\NotificationModel;
 
 class MyNotificationListListener {

@@ -5,7 +5,7 @@
  * Date: 21.03.15
  */
 
-namespace Avanzu\AdminThemeBundle\Command;
+namespace udan\AdminLTEBundle\Command;
 
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;

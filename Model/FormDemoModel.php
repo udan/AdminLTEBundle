@@ -5,7 +5,7 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Class FormDemoModel
  *
- * @package Avanzu\AdminThemeBundle\Model
+ * @package udan\AdminLTEBundle\Model
  */
 class FormDemoModel {
 

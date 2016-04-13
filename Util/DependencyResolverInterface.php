@@ -5,7 +5,7 @@
  * Date: 18.04.14
  */
 
-namespace Avanzu\AdminThemeBundle\Util;
+namespace udan\AdminLTEBundle\Util;
 
 
 interface DependencyResolverInterface

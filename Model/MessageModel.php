@@ -5,7 +5,7 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 /**
  * Simple implementation of the MessageInterface
@@ -63,7 +63,7 @@ class MessageModel implements MessageInterface
     /**
      * Set the sender
      *
-     * @param \Avanzu\AdminThemeBundle\Model\UserInterface $from
+     * @param \udan\AdminLTEBundle\Model\UserInterface $from
      *
      * @return $this
      */
@@ -76,7 +76,7 @@ class MessageModel implements MessageInterface
     /**
      * Get the Sender
      *
-     * @return \Avanzu\AdminThemeBundle\Model\UserInterface
+     * @return \udan\AdminLTEBundle\Model\UserInterface
      */
     public function getFrom()
     {
@@ -132,7 +132,7 @@ class MessageModel implements MessageInterface
     /**
      * Set the recipient
      *
-     * @param \Avanzu\AdminThemeBundle\Model\UserInterface $to
+     * @param \udan\AdminLTEBundle\Model\UserInterface $to
      *
      * @return $this
      */
@@ -145,7 +145,7 @@ class MessageModel implements MessageInterface
     /**
      * Get the recipient
      *
-     * @return \Avanzu\AdminThemeBundle\Model\UserInterface
+     * @return \udan\AdminLTEBundle\Model\UserInterface
      */
     public function getTo()
     {

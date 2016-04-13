@@ -4,12 +4,12 @@ Although the `MenuItemInteface` as well as the `MenuItemModel` are designed to s
 
 ### Data Model
 
-In order to use this component, your have to create a `MenuItemModel` class that implements the `Avanzu\AdminThemeBundle\Model\MenuItemInterface`
+In order to use this component, your have to create a `MenuItemModel` class that implements the `udan\AdminLTEBundle\Model\MenuItemInterface`
 ```php
 <?php
 namespace MyAdminBundle\Model;
 // ...
-use Avanzu\AdminThemeBundle\Model\MenuItemInterface as ThemeMenuItem;
+use udan\AdminLTEBundle\Model\MenuItemInterface as ThemeMenuItem;
 
 class MenuItemModel implements ThemeMenuItem {
 	// ...
@@ -20,13 +20,13 @@ class MenuItemModel implements ThemeMenuItem {
 The bundle provides the `MenuItemModel` as a ready to use implementation of the `MenuItemInterface`. You can use it to create a menu item
 
 ```php
-$menuItem = new \Avanzu\AdminThemeBundle\Model\MenuItemModel('item', 'Item', 'item_route_name');
+$menuItem = new \udan\AdminLTEBundle\Model\MenuItemModel('item', 'Item', 'item_route_name');
 ```
 
 or a menu label
 
 ```php
-$menuLabel = new \Avanzu\AdminThemeBundle\Model\MenuItemModel('label', 'Label', false);
+$menuLabel = new \udan\AdminLTEBundle\Model\MenuItemModel('label', 'Label', false);
 ```
 
 ### Event Listener
@@ -38,7 +38,7 @@ namespace MyAdminBundle\EventListener;
 // ...
 
 use MyAdminBundle\Model\MenuItemModel;
-use Avanzu\AdminThemeBundle\Event\SidebarMenuEvent;
+use udan\AdminLTEBundle\Event\SidebarMenuEvent;
 use Symfony\Component\HttpFoundation\Request;
 
 class MyMenuItemListListener {

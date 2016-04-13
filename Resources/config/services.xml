@@ -6,16 +6,16 @@
 
 
     <parameters>
-        <parameter key="avanzu_admin_theme.navbar_user_listener.class">Avanzu\AdminThemeBundle\EventListener\NavbarShowUserDemoListener</parameter>
-        <parameter key="avanzu_admin_theme.navbar_task_listener.class">Avanzu\AdminThemeBundle\EventListener\NavbarTaskListDemoListener</parameter>
-        <parameter key="avanzu_admin_theme.navbar_notify_listener.class">Avanzu\AdminThemeBundle\EventListener\NavbarNotificationListDemoListener</parameter>
-        <parameter key="avanzu_admin_theme.navbar_msg_listener.class">Avanzu\AdminThemeBundle\EventListener\NavbarMessageListDemoListener</parameter>
-        <parameter key="avanzu_admin_theme.setup_menu_listener.class">Avanzu\AdminThemeBundle\EventListener\SidebarSetupMenuDemoListener</parameter>
-        <parameter key="avanzu_admin_theme.exception_controller.class">Avanzu\AdminThemeBundle\Controller\ExceptionController</parameter>
-        <parameter key="twig.controller.exception.class">Avanzu\AdminThemeBundle\Controller\ExceptionController</parameter>
-        <parameter key="avanzu_admin_theme.widget_extension.class">Avanzu\AdminThemeBundle\Twig\WidgetExtension</parameter>
-        <parameter key="avanzu_admin_theme.theme_manager.class">Avanzu\AdminThemeBundle\Theme\ThemeManager</parameter>
-        <parameter key="avanzu_admin_theme.setup_theme_listener.class">Avanzu\AdminThemeBundle\EventListener\SetupThemeListener</parameter>
+        <parameter key="avanzu_admin_theme.navbar_user_listener.class">udan\AdminLTEBundle\EventListener\NavbarShowUserDemoListener</parameter>
+        <parameter key="avanzu_admin_theme.navbar_task_listener.class">udan\AdminLTEBundle\EventListener\NavbarTaskListDemoListener</parameter>
+        <parameter key="avanzu_admin_theme.navbar_notify_listener.class">udan\AdminLTEBundle\EventListener\NavbarNotificationListDemoListener</parameter>
+        <parameter key="avanzu_admin_theme.navbar_msg_listener.class">udan\AdminLTEBundle\EventListener\NavbarMessageListDemoListener</parameter>
+        <parameter key="avanzu_admin_theme.setup_menu_listener.class">udan\AdminLTEBundle\EventListener\SidebarSetupMenuDemoListener</parameter>
+        <parameter key="avanzu_admin_theme.exception_controller.class">udan\AdminLTEBundle\Controller\ExceptionController</parameter>
+        <parameter key="twig.controller.exception.class">udan\AdminLTEBundle\Controller\ExceptionController</parameter>
+        <parameter key="avanzu_admin_theme.widget_extension.class">udan\AdminLTEBundle\Twig\WidgetExtension</parameter>
+        <parameter key="avanzu_admin_theme.theme_manager.class">udan\AdminLTEBundle\Theme\ThemeManager</parameter>
+        <parameter key="avanzu_admin_theme.setup_theme_listener.class">udan\AdminLTEBundle\EventListener\SetupThemeListener</parameter>
         <parameter key="avanzu_admin_theme.dependency_resolver.class" />
         <parameter key="avanzu_admin_theme.css_base" />
         <parameter key="avanzu_admin_theme.lte_admin" />
@@ -43,7 +43,7 @@
             <argument>%avanzu_admin_theme.lte_admin%</argument>
             <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
         </service>
-        <service id="avanzu_admin_theme.context_listener" class="Avanzu\AdminThemeBundle\EventListener\ContextListener">
+        <service id="avanzu_admin_theme.context_listener" class="udan\AdminLTEBundle\EventListener\ContextListener">
             <argument type="service" id="service_container" />
             <tag name="kernel.event_listener" event="kernel.request" method="onRequest" />
         </service>

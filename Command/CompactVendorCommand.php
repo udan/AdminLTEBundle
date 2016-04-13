@@ -5,7 +5,7 @@
  * Date: 15.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Command;
+namespace udan\AdminLTEBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Helper\FormatterHelper;
@@ -40,7 +40,7 @@ class CompactVendorCommand extends ContainerAwareCommand {
         $helper = $this->getHelperSet()->get('formatter');
         /** @var $helper FormatterHelper */
 
-        $vendors = $kernel->locateResource('@AvanzuAdminThemeBundle/Resources/vendor/');
+        $vendors = $kernel->locateResource('@udanAdminLTEBundle/Resources/vendor/');
 
         $public = dirname($vendors) . '/public';
         $images = $public . '/images';
@@ -63,7 +63,7 @@ class CompactVendorCommand extends ContainerAwareCommand {
 
     protected function getThemePath($type, InputInterface $input, $kernel) {
         $theme    = $input->getArgument('theme');
-        $themedir = strtr('@AvanzuAdminThemeBundle/Resources/vendor/bootflat/{type}',
+        $themedir = strtr('@udanAdminLTEBundle/Resources/vendor/bootflat/{type}',
                           array(
                               '{theme}' => $theme,
                               '{type}'  => $type
@@ -81,7 +81,7 @@ class CompactVendorCommand extends ContainerAwareCommand {
 
 
         $vendors  = $this->getThemePath('fonts', $input, $kernel);
-        $target   = $kernel->locateResource('@AvanzuAdminThemeBundle/Resources/public/fonts');
+        $target   = $kernel->locateResource('@udanAdminLTEBundle/Resources/public/fonts');
 
         $process = new Process(sprintf('rm -rf %s/*', $target));
         $output->writeln($helper->formatSection('Executing', $process->getCommandLine(), 'comment'));
@@ -102,7 +102,7 @@ class CompactVendorCommand extends ContainerAwareCommand {
         /** @var $helper FormatterHelper */
 
         $vendors  = $this->getThemePath('img', $input, $kernel);
-        $target   = $kernel->locateResource('@AvanzuAdminThemeBundle/Resources/public/img');
+        $target   = $kernel->locateResource('@udanAdminLTEBundle/Resources/public/img');
 
         $process = new Process(sprintf('rm -rf %s/*', $target));
         $output->writeln($helper->formatSection('Executing', $process->getCommandLine(), 'comment'));
@@ -189,7 +189,7 @@ class CompactVendorCommand extends ContainerAwareCommand {
         $helper = $this->getHelperSet()->get('formatter');
         /** @var $helper FormatterHelper */
 
-        $vendors = $kernel->locateResource('@AvanzuAdminThemeBundle/Resources/vendor/');
+        $vendors = $kernel->locateResource('@udanAdminLTEBundle/Resources/vendor/');
 
         $public = dirname($vendors) . '/public';
         $script = $public . '/js/vendors.js';

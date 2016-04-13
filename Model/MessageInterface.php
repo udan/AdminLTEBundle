@@ -5,7 +5,7 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 
 /**

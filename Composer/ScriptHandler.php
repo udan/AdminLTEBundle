@@ -7,7 +7,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
-namespace Avanzu\AdminThemeBundle\Composer;
+namespace udan\AdminLTEBundle\Composer;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\PhpExecutableFinder;
@@ -18,7 +18,7 @@ use Symfony\Component\Filesystem\Filesystem;
 /**
  * ScriptHandler
  *
- * @package    AvanzuAdminThemeBundle
+ * @package    udanAdminLTEBundle
  * @subpackage Composer
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author     Albert Sola

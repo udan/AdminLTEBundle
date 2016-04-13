@@ -5,11 +5,11 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Event\TaskListEvent;
-use Avanzu\AdminThemeBundle\Model\TaskModel;
+use udan\AdminLTEBundle\Event\TaskListEvent;
+use udan\AdminLTEBundle\Model\TaskModel;
 
 class NavbarTaskListDemoListener
 {

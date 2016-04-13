@@ -5,11 +5,11 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Event\NotificationListEvent;
-use Avanzu\AdminThemeBundle\Model\NotificationModel;
+use udan\AdminLTEBundle\Event\NotificationListEvent;
+use udan\AdminLTEBundle\Model\NotificationModel;
 
 class NavbarNotificationListDemoListener {
 

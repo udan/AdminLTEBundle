@@ -1,6 +1,6 @@
 <?php
 
-namespace Avanzu\AdminThemeBundle\Tests\Controller;
+namespace udan\AdminLTEBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

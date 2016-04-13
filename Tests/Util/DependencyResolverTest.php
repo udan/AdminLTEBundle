@@ -5,10 +5,10 @@
  * Date: 18.04.14
  */
 
-namespace Avanzu\AdminThemeBundle\Tests\Util;
+namespace udan\AdminLTEBundle\Tests\Util;
 
 
-use Avanzu\AdminThemeBundle\Util\DependencyResolver;
+use udan\AdminLTEBundle\Util\DependencyResolver;
 
 class DependencyResolverTest extends \PHPUnit_Framework_TestCase
 {

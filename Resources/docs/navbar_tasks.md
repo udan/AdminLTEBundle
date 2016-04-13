@@ -16,12 +16,12 @@ avanzu_admin_show_task:
 
 ### Data Model
 
-In order to use this component, your user class has to implement the `Avanzu\AdminThemeBundle\Model\TaskInterface`
+In order to use this component, your user class has to implement the `udan\AdminLTEBundle\Model\TaskInterface`
 ```php
 <?php
 namespace MyAdminBundle\Model;
 // ...
-use Avanzu\AdminThemeBundle\Model\TaskInterface as ThemeTask
+use udan\AdminLTEBundle\Model\TaskInterface as ThemeTask
 
 class TaskModel implements  ThemeTask {
 	// ...
@@ -37,7 +37,7 @@ namespace MyAdminBundle\EventListener;
 
 // ...
 
-use Avanzu\AdminThemeBundle\Event\TaskListEvent;
+use udan\AdminLTEBundle\Event\TaskListEvent;
 use MyAdminBundle\Model\TaskModel;
 
 class MyTaskListListener {

@@ -5,7 +5,7 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Controller;
+namespace udan\AdminLTEBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -33,7 +33,7 @@ class SecurityController extends Controller
         }
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Security:login.html.twig',
+                    'udanAdminLTEBundle:Security:login.html.twig',
                         array(
                             'last_username' => $session->get(SecurityContext::LAST_USERNAME),
                             'error'         => $error,

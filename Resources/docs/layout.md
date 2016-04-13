@@ -2,7 +2,7 @@
 
 In order to use the layout, your views should extend from the provided base-layout
 ```twig
-{% extends 'AvanzuAdminThemeBundle:layout:base-layout.html.twig' %}
+{% extends 'udanAdminLTEBundle:layout:base-layout.html.twig' %}
 ```
 ### layout blocks
 

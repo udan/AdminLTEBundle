@@ -5,7 +5,7 @@
  * Date: 16.03.14
  */
 
-namespace Avanzu\AdminThemeBundle\Controller;
+namespace udan\AdminLTEBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

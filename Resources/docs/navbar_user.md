@@ -16,12 +16,12 @@ avanzu_admin_logout:
 
 ### Data Model
 
-In order to use this component, your user class has to implement the `Avanzu\AdminThemeBundle\Model\UserInterface`
+In order to use this component, your user class has to implement the `udan\AdminLTEBundle\Model\UserInterface`
 ```php
 <?php
 namespace MyAdminBundle\Model;
 // ...
-use Avanzu\AdminThemeBundle\Model\UserInterface as ThemeUser
+use udan\AdminLTEBundle\Model\UserInterface as ThemeUser
 
 class UserModel implements  ThemeUser {
 	// ...
@@ -37,7 +37,7 @@ namespace MyAdminBundle\EventListener;
 
 // ...
 
-use Avanzu\AdminThemeBundle\Event\ShowUserEvent;
+use udan\AdminLTEBundle\Event\ShowUserEvent;
 use MyAdminBundle\Model\UserModel;
 
 class MyShowUserListener {

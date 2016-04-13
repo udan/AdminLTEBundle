@@ -5,7 +5,7 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Form;
+namespace udan\AdminLTEBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -49,7 +49,7 @@ class FormDemoModelType extends AbstractType{
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-                'data_class' => 'Avanzu\AdminThemeBundle\Model\FormDemoModel',
+                'data_class' => 'udan\AdminLTEBundle\Model\FormDemoModel',
             ));
     }
 

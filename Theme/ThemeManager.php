@@ -5,7 +5,7 @@
  * Date: 18.04.14
  */
 
-namespace Avanzu\AdminThemeBundle\Theme;
+namespace udan\AdminLTEBundle\Theme;
 
 
 use Assetic\Asset\AssetCollection;
@@ -36,7 +36,7 @@ class ThemeManager
     function __construct($container, $resolverClass = null)
     {
         $this->container     = $container;
-        $this->resolverClass = $resolverClass?: 'Avanzu\AdminThemeBundle\Util\DependencyResolver';
+        $this->resolverClass = $resolverClass?: 'udan\AdminLTEBundle\Util\DependencyResolver';
     }
 
 

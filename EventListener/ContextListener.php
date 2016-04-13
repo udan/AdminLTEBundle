@@ -5,7 +5,7 @@
  * Date: 23.05.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;

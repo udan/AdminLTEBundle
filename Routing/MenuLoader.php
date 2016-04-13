@@ -5,7 +5,7 @@
  * Date: 24.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Routing;
+namespace udan\AdminLTEBundle\Routing;
 
 
 use Symfony\Component\Config\Loader\Loader;

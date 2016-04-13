@@ -5,11 +5,11 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\EventListener;
+namespace udan\AdminLTEBundle\EventListener;
 
 
-use Avanzu\AdminThemeBundle\Event\ShowUserEvent;
-use Avanzu\AdminThemeBundle\Model\UserModel;
+use udan\AdminLTEBundle\Event\ShowUserEvent;
+use udan\AdminLTEBundle\Model\UserModel;
 
 class NavbarShowUserDemoListener {
 

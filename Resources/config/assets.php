@@ -7,7 +7,7 @@
 
 return call_user_func(
     function () {
-        $jsAssets   = '@AvanzuAdminThemeBundle/Resources/';
+        $jsAssets   = '@udanAdminLTEBundle/Resources/';
         $lteJSBase  = $jsAssets.'public/vendor/adminlte/';
         $cssAssets  = 'bundles/avanzuadmintheme/';
         $lteCssBase = $cssAssets.'vendor/adminlte/';
@@ -116,7 +116,7 @@ return call_user_func(
             ),
             'avatar_img'             => array(
                 'inputs' => array(
-                    '@AvanzuAdminThemeBundle/Resources/public/img/avatar.png'
+                    '@udanAdminLTEBundle/Resources/public/img/avatar.png'
                 )
             ),
             'admin_lte_all'          => array(

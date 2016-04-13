@@ -5,14 +5,14 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Controller;
+namespace udan\AdminLTEBundle\Controller;
 
 
-use Avanzu\AdminThemeBundle\Event\MessageListEvent;
-use Avanzu\AdminThemeBundle\Event\NotificationListEvent;
-use Avanzu\AdminThemeBundle\Event\ShowUserEvent;
-use Avanzu\AdminThemeBundle\Event\TaskListEvent;
-use Avanzu\AdminThemeBundle\Event\ThemeEvents;
+use udan\AdminLTEBundle\Event\MessageListEvent;
+use udan\AdminLTEBundle\Event\NotificationListEvent;
+use udan\AdminLTEBundle\Event\ShowUserEvent;
+use udan\AdminLTEBundle\Event\TaskListEvent;
+use udan\AdminLTEBundle\Event\ThemeEvents;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,7 +39,7 @@ class NavbarController extends Controller
         $listEvent = $this->getDispatcher()->dispatch(ThemeEvents::THEME_NOTIFICATIONS, new NotificationListEvent());
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Navbar:notifications.html.twig',
+                    'udanAdminLTEBundle:Navbar:notifications.html.twig',
                         array(
                             'notifications' => $listEvent->getNotifications(),
                             'total'         => $listEvent->getTotal()
@@ -58,7 +58,7 @@ class NavbarController extends Controller
         $listEvent = $this->getDispatcher()->dispatch(ThemeEvents::THEME_MESSAGES, new MessageListEvent());
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Navbar:messages.html.twig',
+                    'udanAdminLTEBundle:Navbar:messages.html.twig',
                         array(
                             'messages' => $listEvent->getMessages(),
                             'total'    => $listEvent->getTotal()
@@ -75,7 +75,7 @@ class NavbarController extends Controller
         $listEvent = $this->getDispatcher()->dispatch(ThemeEvents::THEME_TASKS, new TaskListEvent());
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Navbar:tasks.html.twig',
+                    'udanAdminLTEBundle:Navbar:tasks.html.twig',
                         array(
                             'tasks' => $listEvent->getTasks(),
                             'total' => $listEvent->getTotal()
@@ -92,7 +92,7 @@ class NavbarController extends Controller
         $userEvent = $this->getDispatcher()->dispatch(ThemeEvents::THEME_NAVBAR_USER, new ShowUserEvent());
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Navbar:user.html.twig',
+                    'udanAdminLTEBundle:Navbar:user.html.twig',
                         array(
                             'user' => $userEvent->getUser()
                         )

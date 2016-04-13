@@ -5,12 +5,12 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Controller;
+namespace udan\AdminLTEBundle\Controller;
 
 
-use Avanzu\AdminThemeBundle\Event\SidebarMenuEvent;
-use Avanzu\AdminThemeBundle\Event\ThemeEvents;
-use Avanzu\AdminThemeBundle\Model\MenuItemInterface;
+use udan\AdminLTEBundle\Event\SidebarMenuEvent;
+use udan\AdminLTEBundle\Event\ThemeEvents;
+use udan\AdminLTEBundle\Model\MenuItemInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -54,7 +54,7 @@ class BreadcrumbController extends Controller {
         }
 
 
-        return $this->render('AvanzuAdminThemeBundle:Breadcrumb:breadcrumb.html.twig', array(
+        return $this->render('udanAdminLTEBundle:Breadcrumb:breadcrumb.html.twig', array(
                 'active' => $list,
                 'title'  => $title
             ));

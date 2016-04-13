@@ -5,12 +5,12 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Model;
+namespace udan\AdminLTEBundle\Model;
 
 /**
  * Class MenuItemModel
  *
- * @package Avanzu\AdminThemeBundle\Model
+ * @package udan\AdminLTEBundle\Model
  */
 class MenuItemModel implements MenuItemInterface
 {
@@ -187,7 +187,7 @@ class MenuItemModel implements MenuItemInterface
     }
 
     /**
-     * @return \Avanzu\AdminThemeBundle\Model\MenuItemInterface
+     * @return \udan\AdminLTEBundle\Model\MenuItemInterface
      */
     public function getParent()
     {
@@ -195,7 +195,7 @@ class MenuItemModel implements MenuItemInterface
     }
 
     /**
-     * @param \Avanzu\AdminThemeBundle\Model\MenuItemInterface $parent
+     * @param \udan\AdminLTEBundle\Model\MenuItemInterface $parent
      *
      * @return $this
      */

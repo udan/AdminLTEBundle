@@ -1,6 +1,6 @@
 avanzu_admin_home:
   path: /demo-admin/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:index}
+  defaults: {_controller: udanAdminLTEBundle:Default:index}
 avanzu_admin_profile:
   path: /profile/{userid}/
 avanzu_admin_logout:
@@ -22,23 +22,23 @@ avanzu_admin_show_message:
 
 avanzu_admin_demo:
   path: /demo-admin/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:index}
+  defaults: {_controller: udanAdminLTEBundle:Default:index}
 avanzu_admin_form_demo:
   path: /demo-admin/form-demo/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:form}
+  defaults: {_controller: udanAdminLTEBundle:Default:form}
 
 avanzu_admin_login_demo:
   path: /demo-admin/login/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:login}
+  defaults: {_controller: udanAdminLTEBundle:Default:login}
 
 avanzu_admin_dash_demo:
   path: /demo-admin/dashboard/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:dashboard}
+  defaults: {_controller: udanAdminLTEBundle:Default:dashboard}
 
 avanzu_admin_ui_gen_demo:
   path: /demo-admin/ui-elements/general/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:uiGeneral}
+  defaults: {_controller: udanAdminLTEBundle:Default:uiGeneral}
 
 avanzu_admin_ui_icon_demo:
   path: /demo-admin/ui-elements/icons/
-  defaults: {_controller: AvanzuAdminThemeBundle:Default:uiIcons}
+  defaults: {_controller: udanAdminLTEBundle:Default:uiIcons}

@@ -5,12 +5,12 @@
  * Date: 23.02.14
  */
 
-namespace Avanzu\AdminThemeBundle\Controller;
+namespace udan\AdminLTEBundle\Controller;
 
 
-use Avanzu\AdminThemeBundle\Event\ShowUserEvent;
-use Avanzu\AdminThemeBundle\Event\SidebarMenuEvent;
-use Avanzu\AdminThemeBundle\Event\ThemeEvents;
+use udan\AdminLTEBundle\Event\ShowUserEvent;
+use udan\AdminLTEBundle\Event\SidebarMenuEvent;
+use udan\AdminLTEBundle\Event\ThemeEvents;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +27,7 @@ class SidebarController extends Controller
         $userEvent = $this->getDispatcher()->dispatch(ThemeEvents::THEME_SIDEBAR_USER, new ShowUserEvent());
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Sidebar:user-panel.html.twig',
+                    'udanAdminLTEBundle:Sidebar:user-panel.html.twig',
                         array(
                             'user' => $userEvent->getUser()
                         )
@@ -46,7 +46,7 @@ class SidebarController extends Controller
     {
 
 
-        return $this->render('AvanzuAdminThemeBundle:Sidebar:search-form.html.twig', array());
+        return $this->render('udanAdminLTEBundle:Sidebar:search-form.html.twig', array());
     }
 
     public function menuAction(Request $request)
@@ -59,7 +59,7 @@ class SidebarController extends Controller
         $event   = $this->getDispatcher()->dispatch(ThemeEvents::THEME_SIDEBAR_SETUP_MENU,new SidebarMenuEvent($request));
 
         return $this->render(
-                    'AvanzuAdminThemeBundle:Sidebar:menu.html.twig',
+                    'udanAdminLTEBundle:Sidebar:menu.html.twig',
                         array(
                             'menu' => $event->getItems()
                         )

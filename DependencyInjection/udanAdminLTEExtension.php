@@ -1,6 +1,6 @@
 <?php
 
-namespace Avanzu\AdminThemeBundle\DependencyInjection;
+namespace udan\AdminLTEBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInterface
+class udanAdminLTEExtension extends Extension implements PrependExtensionInterface
 {
     /**
      * {@inheritDoc}
@@ -44,7 +44,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                 'twig',
                 array(
                     'form_theme'    => array(
-                        'AvanzuAdminThemeBundle:layout:form-theme.html.twig'
+                        'udanAdminLTEBundle:layout:form-theme.html.twig'
                     ),
                     'globals' => array(
                         'admin_theme' => '@avanzu_admin_theme.theme_manager'
@@ -53,8 +53,9 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
             );
         }
 
-        if (isset($bundles['AsseticBundle'])) {
-
+        $configs = $container->getExtensionConfig($this->getAlias());
+        $config = $this->processConfiguration(new Configuration(), $configs);
+         if ($config['use_assetic'] && isset($bundles['AsseticBundle'])) {
             $assets = include(dirname(__FILE__).'/../Resources/config/assets.php');
 
             $container->prependExtensionConfig(
@@ -62,7 +63,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                 array(
                     'assets'  => $assets,
                     'bundles' => array(
-                        'AvanzuAdminThemeBundle'
+                        'udanAdminLTEBundle'
                     )
 
                 )
