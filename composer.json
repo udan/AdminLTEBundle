@@ -22,7 +22,7 @@
         "hamcrest/hamcrest-php"    : "dev-master"
     },
     "autoload": {
-        "psr-4": { "Avanzu\\AdminThemeBundle\\": "" }
+        "psr-4": { "udan\\AdminLTEBundle\\": "" }
     }
 
 }
